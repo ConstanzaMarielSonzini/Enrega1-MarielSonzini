@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+
+html {
+    background-color: rgb(252, 218, 67);
+}
+.header {
+    height: 60px;
+    align-content: center;
+    width: 60%;
+    background-color: rgb(187, 7, 7);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 30%;
+    padding-right: 20%;
+}
+
+nav .links li {
+    list-style: none;
+    display: inline-block;
+    padding:18px;
+
+}
+
+nav .links li{
+    float: left;
+    margin-top: 0px;
+}
+
+nav .links li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 40px;
+}
+
+nav ul li a:hover{
+    background-color: #929fb3;
+}
+
+main .titulo h1 {
+    color: rgb(187, 7, 7);
+}
+h1 {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+h2 {
+    text-align: center;
+}
+
+.Testimonios {
+    color: #000000;
+    text-align: center;
+}
+
+.testimonios_cards {
+    width: 340px;
+    display: inline-block;
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.testimonios_cards p {
+    margin-bottom: 20px;
+    color:rgb(187, 7, 7);
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border:rgb(187, 7, 7) 5px dashed;
+}
+
+.testimonios_cards img {
+    width: 180px;
+    border-radius: 100px;
+  }
