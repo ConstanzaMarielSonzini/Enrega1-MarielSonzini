@@ -18,5 +18,8 @@ Se imprime la información que carga el usuario en la consola.
 
 6) Como abonar: Se utilizó let, prompt y console.log para que la info quede en consola y el usuario trabajador de la pizzeria pueda enterarse de su respuesta.
 
+7) Datos de cliente para terminar encargo. Use objeto.
+
+8) Agregar opciones al listado de verduras, masas y salsas. Use arrays con push. If y else.
 
 Espero les haya gustado! Muchas gracias!!
