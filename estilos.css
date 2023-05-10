@@ -1,41 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
 
-html {
-    background-color: rgb(252, 218, 67);
+
+.titulo p{
+    color: rgb(187, 7, 7);
+    display: flex;
+    display: block;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
 }
+
+.titulo2 {
+    color: rgb(82, 13, 128);
+    font-family: 'Inter', sans-serif;
+    font-style: bold;
+    text-align: center;
+    padding-top:50px;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+.contenedor {
+    display: flex;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
 .header {
-    height: 60px;
     align-content: center;
-    width: 60%;
-    background-color: rgb(187, 7, 7);
-    margin-top: 30px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    margin-top: 40px;
     margin-bottom: 30px;
-    padding-left: 30%;
-    padding-right: 20%;
-}
-
-nav .links li {
-    list-style: none;
-    display: inline-block;
-    padding:18px;
-
-}
-
-nav .links li{
-    float: left;
-    margin-top: 0px;
-}
-
-nav .links li a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 40px;
-}
-
-nav ul li a:hover{
-    background-color: #929fb3;
 }
 
 main .titulo h1 {
@@ -47,8 +47,10 @@ h1 {
     padding-bottom: 20px;
     padding-top: 30px;
 }
-h2 {
+.testimoniosTexto {
     text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin-top: 100px;
 }
 
 .Testimonios {
@@ -57,24 +59,70 @@ h2 {
 }
 
 .testimonios_cards {
-    width: 340px;
+    width: 30%;
     display: inline-block;
     text-align: center;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 20px;
 }
 
 .testimonios_cards p {
-    margin-bottom: 20px;
+    margin-top: 25px;
     color:rgb(187, 7, 7);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     background-color: #ffffff;
-    border-radius: 20px;
+    border-radius: 10px;
     border:rgb(187, 7, 7) 5px dashed;
 }
 
 .testimonios_cards img {
     width: 180px;
     border-radius: 100px;
-  }
+}
+
+.bloque {
+    width: 20%;
+    align-items: flex-start;
+    display: flex;
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 30px;
+    margin-top: 20px;
+}
+
+.mb-3 {
+    width: 20%;
+    align-items: flex-start;
+    display: flex;
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 30px;
+}
+
+.btn-primary {
+    width: 8%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(187, 7, 7);
+    border-radius: 8px;
+    border-color: rgb(131, 7, 7);
+    margin-right: 30px;
+    border-style: dashed;
+    
+}
+
+
+
+
+@media only screen and (max-width: 1100px) {
+.galeria {
+grid-template-columns: 1fr 1fr 1fr;
+}
+.texto-conocenuestrosproductos {
+font-size: 16px;
+}
+.header {
+font-size: 12px;
+}
+}

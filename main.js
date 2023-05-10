@@ -11,108 +11,206 @@ let cupones = [
     new Descuento("PizzaVevoz", 15),
 ];
 
-// 1) Saludo al usuario//
-nombre = prompt("Bienvenidx a Pizza Popular!! \n¿Cual es tu nombre?");
-alert("Bienvenidx a Pizza en 321 " + nombre + "!");
-console.log("Bienvenidx a Pizza en 321 " + nombre + "!");
 
-// 2) Pregunta cuantas pizzas? //
-let cantidadPizzas = parseInt(prompt(nombre + " ¿Cuántas pizzas desea pedir?"));
-alert("Confirmo: Desea pedir " + cantidadPizzas + " pizzas");
-console.log("Desea pedir: " + cantidadPizzas + " pizzas");
+// info del cliente
 
-class Pizza {
-    constructor(masa, verdura, salsa) {
-        this.masa = masa;
-        this.verdura = verdura;
-        this.salsa = salsa;
-    }
+class Pago {
+  constructor(name) {
+    this.name = name;
+  }
 }
 
-let pizzasArray = [
-]
+const pagos = [
+  new Pago ("Efectivo"),
+  new Pago ("Transferencia"),
+  new Pago ("Tarjeta Débito/Crédito"),
+];
 
-for (let pizzas = 0; pizzas < cantidadPizzas; pizzas++) {
-    let pregunta2 = prompt("Pizza " + (pizzas + 1) + ": " + nombre + " ¿Te gustaría que la pizza tenga base de masa madre o masa clásica?");
-    console.log("Tipo de masa: " + pregunta2);
-    let pregunta3 = prompt("Pizza " + (pizzas + 1) + ": " + nombre + " ¿Queres agregarle verdura? \nTenemos tomate, lechuga, rúcula, cebolla caramelizada, cebolla clásica, pepino")
-    console.log("Verduras: " + pregunta3);
-    let pregunta4 = prompt("Pizza " + (pizzas + 1) + ": " + nombre + " ¿Que salsa te gustaría que lleve la pizza? \nTenemos salsa filetto, salsa blanca, salsa barbacoa. (Puedes combinar)")
-    console.log("Tipo de Salsa: " + pregunta4);
+let pagoList = document.getElementById("pago");
 
-    pizzasArray.push(new Pizza(pregunta2,pregunta3,pregunta4))
+pagos.forEach ((unPago) => {
+  let item = document.createElement("option");
+  item.value = unPago.name.toString();
+  item.innerText = unPago.name;
+  pagoList.append(item);
+});
+
+const formulario = document.getElementById("formulario");
+
+function validarFormulario (data){
+  console.log("Validando formulario",data);
+  const hijos = data.children;
+
+  const pedido= {};
+
+  for (let index = 0; index < 4; index++) {
+    const unHijo = hijos[index];
+    const valor = unHijo.children[1].value
+    console.log("El valor almacenado es" + unHijo.children[0].innerText + "es:",{valor});
+  }
 }
 
-console.log(pizzasArray)
+formulario.addEventListener("submit", (event) => {
+  event.preventDefault();
+  validarFormulario(event.target);
 
-// 3) Quieres agregar alcohol?//
-let pregunta6 = prompt(nombre + " ¿Quieres agregar una bebida alcoholica en tu pedido? \nTenemos fernet, vodka smirnoff, vodka sky, gin tanqueray sabor uva. \n(Indicar cual sino ignorar.");
-console.log("Bebida alcoholica: " + pregunta6);
+});
 
-// 4) Pide edad//
-let edad = parseInt(prompt(nombre + " ¿Que edad tienes?"));
-if (edad >= 18) {
-    // Se ejecuta el codigo solo si la condicion es TRUE
-    alert(" Perfecto! Puede agregar bebidas alcoholicas al pedido!");
-} else {
-    // Se ejecuta el codigo solo si la condicion es FALSE
-    alert("No puedes agregar bebidas alcoholicas ya que eres menor de edad ! Disculpe!");
+// Formulario de armado de pizza
+
+class Masa {
+  constructor(name) {
+    this.name = name;
+  }
 }
 
-// 5) descuento de pizzas // Uso de arrays
-function descuentoPizzas(valorPizzas, descuento) {
-    let resultado = valorPizzas - descuento;
-    return alert("El valor de la pizza con el descuento te queda en " + resultado);
+const masas = [
+  new Masa ("Masa Madre"),
+  new Masa ("Masa a la piedra"),
+  new Masa ("Masa Clásica"),
+];
+
+let masaList = document.getElementById("masa");
+
+masas.forEach ((unaMasa) => {
+  let item = document.createElement("option");
+  item.value = unaMasa.name.toString();
+  item.innerText = unaMasa.name;
+  masaList.append(item);
+});
+
+class Salsa {
+  constructor(name) {
+    this.name = name;
+  }
 }
 
-let cuponBuscado = prompt("Inserte cupón de descuento (PizzaPiola, PizzaDance, PizzaVevoz)");
-let descuentoBuscado = cupones.find(
-    (cupon) => cupon.codigo == cuponBuscado
-)
-let valorPizzas = 1500;
-//let descuento = prompt ("El valor de las pizzas es de $ 1.500. \nIngrese el valor del descuento si es que tiene!");
-let resultado = descuentoPizzas(valorPizzas, descuentoBuscado.porcentaje);
+const salsas = [
+  new Salsa ("Salsa Filetto"),
+  new Salsa ("Salsa de Tomate"),
+  new Salsa ("Salsa Agridulce"),
+];
+
+let salsaList = document.getElementById("salsa");
+
+salsas.forEach ((unaSalsa) => {
+  let item = document.createElement("option");
+  item.value = unaSalsa.name.toString();
+  item.innerText = unaSalsa.name;
+  salsaList.append(item);
+});
+
+class Queso {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const quesos = [
+  new Queso ("Queso Fresco"),
+  new Queso ("Queso Rockefort"),
+  new Queso ("Queso Muzzarella"),
+  new Queso ("Queso en Hebras"),
+];
+
+let quesoList = document.getElementById("queso");
+
+masas.forEach ((unQueso) => {
+  let item = document.createElement("option");
+  item.value = unQueso.name.toString();
+  item.innerText = unQueso.name;
+  quesoList.append(item);
+});
+
+class Bebida {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const bebidas = [
+  new Bebida("Coca Cola Original"),
+  new Bebida("Coca Cola Zero"),
+  new Bebida("Sprite con azucar"),
+  new Bebida("Sprite Zero"),
+];
+
+let bebidaList = document.getElementById("bebida");
+
+bebidas.forEach ((unaBebida) => {
+  let item = document.createElement("option");
+  item.value = unaBebida.name.toString();
+  item.innerText = unaBebida.name;
+  bebidaList.append(item);
+});
+
+const armado = document.getElementById("armado");
+function validarArmado (data){
+  console.log("Validando armado",data);
+  const hijos = data.children;
+
+  for (let index = 0; index < 3; index++) {
+    const unHijo = hijos[index];
+    const valor = unHijo.children[1].value
+    console.log("La pizza contiene" + unHijo.children[0].innerText + "es:",{valor});
+  }
+}
+
+armado.addEventListener("submit", (event) => {
+  event.preventDefault();
+  validarArmado(event.target);
+
+});
 
 
-// 7) datos de cliente para terminar encargo. Use objeto. //
+//Uso de Storage
 
-let uncliente = {
-    entrega: "",
-    pago: "",
-    nombreApellido: "",
-    tel: "",
-    direccion: "",
-};
+class Pedido {
+  constructor (masa, salsa, queso, bebida, pago, nombre, apellido, numeroTelefono) {
+    this.masa = masa;
+    this.salsa = salsa;
+    this.queso = queso;
+    this.bebida = bebida;
+    this.pago = pago;
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.numeroTelefono = numeroTelefono;
 
-uncliente.entrega = prompt(nombre + " ¿Cómo quisieras que sea la entrega? ¿Retiro o delivery?");
-uncliente.pago = prompt(nombre + " ¿Cómo quisieras abonar? ¿Efectivo, transferencia o débito?");
-uncliente.nombreApellido = prompt(nombre + " ¿Cúal es tu nombre y apellido completo?");
-uncliente.tel = prompt(nombre + " ¿Cúal es es tu número de teléfono?");
-uncliente.direccion = prompt(nombre + " Indica tu dirección");
+  }
+}
 
-console.log("Los datos del cliente son ", uncliente);
+function guardarPedido () {
+  const masa = document.getElementById("masa").value;
+  const salsa = document.getElementById("salsa").value;
+  const queso = document.getElementById("queso").value;
+  const bebida = document.getElementById("bebida").value;
+  const pago = document.getElementById("pago").value;
+  const apellido = document.getElementById("apellido").value;
+  const telefono = document.getElementById("telefono").value;
 
-// 8) Preguntas de mejora al usuario con funcion if, else. y arrays//
+  const pedido = new Pedido (masa, salsa, queso, bebida, pago, nombre, apellido, telefono);
+  localStorage.setItem("pedido", JSON.stringify(pedido));
+}
 
-let preguntas = (prompt(nombre + " queremos mejorar!!! \n¿Nos ayudarías respondiendo unas preguntas?. Respondé si o no."));
-if (preguntas.toLowerCase() == "si") {
-    //Se ejecuta el codigo solo si la condicion es TRUE//
-    alert("Perfecto aquí vamos !!");
-    let verduras = ["lechuga", "tomate", "cebolla", "zanahoria"];
-    let nuevasverduras = prompt("AYUDANOS A MEJORAR ! \n¿Que verdura agregarías en las opciones? Hay lechuga, tomate, cebolla y zanahoria. En caso de no agregar aclarar.");
-    verduras.push(nuevasverduras);
-    console.log("Para", nombre, "el listado de verduras disponibles debe quedar asi ", verduras);
+armado.addEventListener("submit", (event)=>{
+  event.preventDefault ();
+  validarArmado(event.target);
+  guardarPedido();
+});
 
-    let masas = ["masa madre", "masa clásica"];
-    let nuevasmasas = prompt("AYUDANOS A MEJORAR ! \n¿Que masas agregarías en las opciones? Hay masa madre y masa clásica. En caso de no agregar aclarar.");
-    masas.push(nuevasmasas);
-    console.log("Para", nombre, "el listado de verduras disponibles debe quedar asi ", masas);
+function mostrarPedido () {
+  const pedidoGuardado = localStorage.getItem("pedido");
+  if (pedidoGuardado) {
+    const pedido = JSON.parse (pedidoGuardado);
 
-    let salsas = ["salsa filetto", "salsa blanca", "salsa barbacoa"];
-    let nuevassalsas = prompt("AYUDANOS A MEJORAR ! \n¿Que salsa agregarías en las opciones? Hay salsa filetto, salsa blanca, salsa barbacoa. En caso de no agregar aclarar.");
-    salsas.push(nuevassalsas);
-    console.log("La descripción sobre propiedad del cliente es ", salsas);
-} else {
-    //Se ejecuta el codigo solo si la condicion es FALSE//
-    alert("Ningun problema!", nombre, ". Muchas gracias por elegirnos!!")
+    document.getElementById("pedido-masa").innerText = pedido.masa;
+    document.getElementById("pedido-salsa").innerText = pedido.salsa;
+    document.getElementById("pedido-queso").innerText = pedido.queso;
+    document.getElementById("pedido-bebida").innerText = pedido.bebida;
+    document.getElementById("pedido-pago").innerText = pedido.pago;
+    document.getElementById("pedido-nombre").innerText = pedido.nombre;
+    document.getElementById("pedido-apellido").innerText = pedido.apellido;
+    document.getElementById("pedido-telefono").innerText = pedido.telefono;
+
+  }
 }
