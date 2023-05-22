@@ -1,0 +1,18 @@
+[
+    {
+      "nombre": "Sucursal A",
+      "direccion": "Calle 1, Ciudad",
+      "telefono": "123456789"
+    },
+    {
+      "nombre": "Sucursal B",
+      "direccion": "Calle 2, Ciudad",
+      "telefono": "987654321"
+    },
+    {
+      "nombre": "Sucursal C",
+      "direccion": "Calle 3, Ciudad",
+      "telefono": "456789123"
+    }
+  ]
+  

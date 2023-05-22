@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Oooh+Baby&family=Poppins:wght@300&family=Secular+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&family=Roboto+Mono:ital,wght@0,700;1,100;1,600&display=swap');
 
+.bodyColor{
+    background-color: rgb(0, 0, 0) !important;
+}
 
 .titulo p{
-    color: rgb(187, 7, 7);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+    color: rgb(248, 229, 124);
     display: flex;
     display: block;
     text-align: center;
@@ -11,8 +19,8 @@
 }
 
 .titulo2 {
-    color: rgb(82, 13, 128);
-    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto Mono', monospace;
     font-style: bold;
     text-align: center;
     padding-top:50px;
@@ -21,6 +29,7 @@
 }
 
 .contenedor {
+    color: rgb(0, 0, 0);
     display: flex;
     display: block;
     text-align: center;
@@ -30,25 +39,29 @@
 }
 
 .header {
+    font-family: 'Roboto Mono', monospace;
     align-content: center;
     color: rgb(255, 255, 255);
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color:  rgb(248, 229, 124);
     margin-top: 40px;
     margin-bottom: 30px;
 }
 
 main .titulo h1 {
-    color: rgb(187, 7, 7);
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(255, 255, 255);
 }
 h1 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     text-align: center;
     padding-bottom: 20px;
     padding-top: 30px;
 }
 .testimoniosTexto {
+    font-family: 'Roboto Mono', monospace;
     text-align: center;
+    color:rgb(248, 229, 124);
     font-family: 'Inter', sans-serif;
     margin-top: 100px;
 }
@@ -59,6 +72,7 @@ h1 {
 }
 
 .testimonios_cards {
+    font-family: 'Roboto Mono', monospace;
     width: 30%;
     display: inline-block;
     text-align: center;
@@ -68,13 +82,15 @@ h1 {
 }
 
 .testimonios_cards p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
     margin-top: 25px;
-    color:rgb(187, 7, 7);
+    color:rgb(255, 255, 255);
     padding: 10px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 10px;
-    border:rgb(187, 7, 7) 5px dashed;
+    border:rgb(235, 200, 7) 5px dashed;
 }
 
 .testimonios_cards img {
@@ -83,37 +99,70 @@ h1 {
 }
 
 .bloque {
-    width: 20%;
+    width: 15%;
     align-items: flex-start;
     display: flex;
     display: inline-block;
-    padding-left: 50px;
-    padding-right: 30px;
-    margin-top: 20px;
 }
 
 .mb-3 {
-    width: 20%;
+    width: 40%;
+    margin:10px;
+    margin-left: 80px;
+    color: rgb(255, 255, 255);
     align-items: flex-start;
     display: flex;
     display: inline-block;
-    padding-left: 50px;
-    padding-right: 30px;
+
+}
+
+.bloque {
+    width: 40%;
+    margin:10px;
+    margin-left: 80px;
+    color: rgb(255, 255, 255);
+    align-items: flex-start;
+    display: flex;
+    display: inline-block;
+}
+
+.form-check {
+    list-style-position: black;
 }
 
 .btn-primary {
-    width: 8%;
-    color: rgb(255, 255, 255);
-    background-color: rgb(187, 7, 7);
+    width: 150px;
+    color: rgb(0, 0, 0);
+    background-color:  rgb(248, 229, 124);
+    float: right;
+    margin-inline: 100px;
+    margin-right: 20px;
     border-radius: 8px;
-    border-color: rgb(131, 7, 7);
-    margin-right: 30px;
-    border-style: dashed;
+    border-style:double;
     
 }
 
+.info-pedido{
+    width: 100%;
+    background-color:rgb(248, 229, 124);
+    display: flex;
+    display: inline-block;
+    padding-left: 200px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
 
+.info-pedido p{
+    width: 310px;
+    background-color:rgb(248, 229, 124);
+    display:contents;
+    display: inline-block;
+}
 
+.bloque {
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
 
 @media only screen and (max-width: 1100px) {
 .galeria {
@@ -125,4 +174,60 @@ font-size: 16px;
 .header {
 font-size: 12px;
 }
+}
+
+.codigo-descuento {
+    margin-top:  80px;
+    color: white;
+
+}
+
+
+.descuento-contenedor {
+background-color: rgb(255, 255, 255);
+border-radius: 100px;
+width: 40%;
+height: 100px;
+margin-left: 29%;
+margin-top: 4%;
+}
+
+.descuento-contenedor .descuento-boton{
+    width: 40%;
+    margin-right: 4% ;
+    color: rgb(0, 0, 0);
+    background-color:  rgb(248, 229, 124);
+    border-radius: 8px;
+    border-style:double;
+    }
+
+input#codigo-descuento{
+padding-left: 0px;
+padding-right: 20px;
+color: rgb(0, 0, 0);
+}
+
+label.codigo-descuento{
+    margin-top: 0%;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-left: 100px;
+    width: 50%;
+    color: rgb(0, 0, 0);
+    }
+
+button.descuento-boton{
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 240px;
+}
+
+p#mensaje-descuento {
+    color: white;
+    padding-left: 130px;
+    margin-top: 15px;
+}
+
+.contenedor-sucursales{
+    color: aqua;
 }

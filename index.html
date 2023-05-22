@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Número 1</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+
+   
 </head>
-<body>
+<body class="bodyColor">
     
     <p class="logo"><a href="index.html">PIZZA NÚMERO 1
     </a></p>
@@ -36,55 +38,47 @@
           </div>
     </nav>
     </header>
-    <section>
-        <form id="formulario">
-            <div class="mb-3">
-                <label for="nombres" class="nombre">Nombre Completo</label>
-                <input type="text" class="form-control" id="nombres"/>
-            </div>
-
-            <div class="mb-3">
-                <label for="apellidos" class="Apellido">Apellido Completo</label>
-                <input type="text" class="form-control" id="apellidos"/>
-            </div>
     
-            <div class="mb-3">
-                <label for="pago" class="Metodo">Método de pago</label>
-                <select id="pago" class="form-select">
-                        <option value="0">Seleccione una opción</option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="telefono" class="NumeroTelefono">Teléfono</label>
-                <input type="text" class="form-control" id="telefono"/>
-            </div>
-            <button type="submit" class="btn-primary" id="btnInscribir">Enviar Datos</button>
-        </form>
-    </section>
+   
     <div class="titulo2">ARMÁ TU PIZZA #ATUMANERA</div>
-    <div class="bloque">VERDURAS
+    <section id="todo">
+    <div class="bloque">FRUTAS Y VERDURAS
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="tomate" id="verdura1">
-            <label class="form-check-label" for="verdura">Tomate</label>
+            <input type="checkbox" name="verdura" value="Tomate" />
+            <label>Tomate</label>
+        </div>    
+        <div class="form-check">
+            <input type="checkbox" name="verdura" value="Huevo" />
+            <label>Huevo</label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="tomate" id="verdura2">
-            <label class="form-check-label" for="verdura">Rúcula</label>
+            <input type="checkbox" name="verdura" value="Rúcula" />
+            <label>Rúcula</label>
+        </div>    
+        <div class="form-check">
+            <input type="checkbox" name="verdura" value="Brocoli" />
+            <label>Brocoli</label>
+        </div>  
+        <div class="form-check">
+            <input type="checkbox" name="verdura" value="Palmitos" />
+            <label>Palmitos</label>
+        </div>     
+        <div class="form-check">
+            <input type="checkbox" name="verdura" value="Aceitunas" />
+            <label>Aceitunas</label>
+        </div> 
+        <div class="form-check">
+            <input type="checkbox" name="verdura" value="Champiñones" />
+            <label>Champiñones</label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="tomate" id="verdura3">
-            <label class="form-check-label" for="verdura">Palmito</label>
+            <input type="checkbox" name="verdura" value="Cebolla Clásica" />
+            <label>Cebolla Clásica</label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="tomate" id="verdura4">
-            <label class="form-check-label" for="verdura">Cebolla Clásica</label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="tomate" id="verdura5">
-            <label class="form-check-label" for="verdura">Cebolla Caramelizada</label>
-        </div>
-    
+            <input type="checkbox" name="verdura" value="Cebolla Morada" />
+            <label>Cebolla Morada</label>
+        </div>    
     </div>
     <form id="armado">
         <div class="bloque">
@@ -112,7 +106,52 @@
             </select>
         </div>
     <button type="submit" class="btn-primary" id="PizzaATuManera">Enviar Pedido</button>
+</section>
 </form>
+<div class="titulo2">CARGA TUS DATOS PARA REALIZAR EL PEDIDO</div>
+<section> 
+    <form id="formulario">
+        <div class="mb-3">
+            <label for="nombre" class="nombre">Nombre Completo</label>
+            <input type="text" class="form-control" id="nombre"/>
+        </div>
+
+        <div class="mb-3">
+            <label for="apellido" class="apellido">Apellido Completo</label>
+            <input type="text" class="form-control" id="apellido"/>
+        </div>
+
+        <div class="mb-3">
+            <label for="pago" class="Metodo">Método de pago</label>
+            <select id="pago" class="form-select">
+                    <option value="0">Seleccione una opción</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="telefono" class="NumeroTelefono">Teléfono</label>
+            <input type="text" class="form-control" id="telefono"/>
+        </div>
+
+        <button type="submit" class="btn-primary" id="btnInscribir">Enviar Datos</button>
+    </form>
+</section>
+
+<div class="titulo2">DATOS DE PEDIDO:</div>
+<div id="info-pedido"></div>
+
+<div class="descuento-contenedor">
+    <label class="codigo-descuento">Código de Descuento:</label>
+    <input type="text" id="codigo-descuento">
+    <button class="descuento-boton" onclick="aplicarDescuento()">Aplicar Descuento</button>
+<p id="mensaje-descuento"></p>
+</div>
+
+<section>
+    <p>Sucursales de Pizzeria Número 1</p>
+    <div id="contenedor-sucursales"></div>
+</section>
+
     <main>
             <h2 class="testimoniosTexto">Testimonios</h2>
             <section class="Testimonios">
@@ -137,7 +176,8 @@
             <i class="fa-brands fa-instagram"></i>
         </div>
     </footer>
-    
+<script src="ruta/sweet-alert.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html> 
