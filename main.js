@@ -244,7 +244,7 @@ if (pedidoGuardado) {
 
 infoPedidoElement.classList.add("info-pedido");
 } else {
-infoPedidoElement.innerHTML = "<p> No se encontró ningún peido. </p>";
+infoPedidoElement.innerHTML = "<p> No se encontró ningún pedido. </p>";
 infoPedidoElement.classList.remove("info-pedido");
 }
 }
@@ -256,40 +256,6 @@ armadoFormulario.addEventListener("submit", (event)=> {
   mostrarPedido();
 });
 
-
-
-
-// Uso de JSON y Fetch
-
-function mostrarSucursales() {
-
-  const contenedorSucursales = document.getElementById("contenedor-sucursales");
-
-  fetch("json/sucursales.json")
-    .then(response => response.json())
-    .then(data => console.log(data)){
-
-      data.forEach(sucursal => {
-  
-        const divSucursal = document.createElement("div");
-        const nombreSucursal = document.createElement("h3");
-        const direccionSucursal = document.createElement("p");
-        const telefonoSucursal = document.createElement("p");
-
-        nombreSucursal.textContent = sucursal.nombre;
-        direccionSucursal.textContent = `Dirección: ${sucursal.direccion}`;
-        telefonoSucursal.textContent = `Teléfono: ${sucursal.telefono}`;
-
-        divSucursal.appendChild(nombreSucursal);
-        divSucursal.appendChild(direccionSucursal);
-        divSucursal.appendChild(telefonoSucursal);
-        contenedorSucursales.appendChild(divSucursal);
-      });
-    }
-    .catch(error => {
-      console.log("Error al cargar las sucursales:", error);
-    });
-}
 
 // Cupon de descuento
 
@@ -318,6 +284,37 @@ function aplicarDescuento() {
 }
 
 
+// Uso de JSON y Fetch
+
 document.addEventListener("DOMContentLoaded", function() {
-  mostrarSucursales();
+  const botonMostrarSucursales = document.getElementById("boton-mostrar-sucursales");
+  botonMostrarSucursales.addEventListener("click", mostrarSucursales);
 });
+
+function mostrarSucursales() {
+  const contenedorSucursales = document.getElementById("contenedor-sucursales");
+
+  fetch("json/sucursales.json")
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      data.forEach(sucursal => {
+        const divSucursal = document.createElement("div");
+        const nombreSucursal = document.createElement("h3");
+        const direccionSucursal = document.createElement("p");
+        const telefonoSucursal = document.createElement("p");
+
+        nombreSucursal.textContent = sucursal.nombre;
+        direccionSucursal.textContent = `Dirección: ${sucursal.direccion}`;
+        telefonoSucursal.textContent = `Teléfono: ${sucursal.telefono}`;
+
+        divSucursal.appendChild(nombreSucursal);
+        divSucursal.appendChild(direccionSucursal);
+        divSucursal.appendChild(telefonoSucursal);
+        contenedorSucursales.appendChild(divSucursal);
+      });
+    })
+    .catch(error => {
+      console.log("Error al cargar las sucursales:", error);
+    });
+}
