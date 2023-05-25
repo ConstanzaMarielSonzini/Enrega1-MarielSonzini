@@ -219,7 +219,6 @@ guardarPedido();
 });
 
 
-
 function mostrarPedido () {
   const pedidoGuardado = localStorage.getItem("pedido");
   const infoPedidoElement = document.getElementById("info-pedido");
@@ -265,7 +264,7 @@ function aplicarDescuento() {
   var descuentosGuardados = JSON.parse(localStorage.getItem("descuentos")) || {};
 
   if (descuentosGuardados.hasOwnProperty(codigo)) {
-    var descuento = descuentosGuardados[codigo];
+    var descuentosGuardados = descuentosGuardados[codigo];
 
     Swal.fire({
       title: "Descuento aplicado",
