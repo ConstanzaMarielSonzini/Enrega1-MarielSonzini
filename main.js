@@ -229,16 +229,16 @@ if (pedidoGuardado) {
   const precioFinal = precioPizzas;
 
   infoPedidoElement.innerHTML =`
-  <p>Masa: ${pedido.masa}</p>
-  <p>Salsa: ${pedido.salsa}</p> 
-  <p> Verduras: ${pedido.verdura.join(", ")}</p>
-  <p>Queso: ${pedido.queso}</p>
-  <p>Bebida: ${pedido.bebida}</p>
-  <p>Pago: ${pedido.pago}</p>
   <p>Nombre: ${pedido.usuario.nombre}</p>
+  <p>Masa: ${pedido.masa}</p>
+  <p>Salsa: ${pedido.salsa}</p>
   <p>Apellido: ${pedido.usuario.apellido}</p>
+  <p> Verduras: ${pedido.verdura.join(", ")}</p>
+  <p>Bebida: ${pedido.bebida}</p>
   <p>Telefono: ${pedido.usuario.telefono}</p>
+  <p>Queso: ${pedido.queso}</p>
   <p>Precio Final: $${precioFinal}</p>
+  <p>Pago: ${pedido.pago}</p>
   `;
 
 infoPedidoElement.classList.add("info-pedido");
