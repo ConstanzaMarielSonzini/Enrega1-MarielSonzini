@@ -10,6 +10,24 @@
     background-color: rgb(0, 0, 0) !important;
 }
 
+.redes-sociales{
+    color: rgb(0, 0, 0);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.footer{
+    background-color: white;
+    padding-top: 2.5%;
+    padding-bottom: 1%;
+}
+#logofresia{
+    width: 8%;
+    float: right;
+    margin-top: -8.5%;
+    margin-right: 10%;
+}
+
 .checkbox-group {
     display: flex;
     flex-wrap: wrap;
@@ -36,7 +54,7 @@
 
 .titulo p{
     font-family: 'Akatab', sans-serif;
-    font-size: 13px;
+    font-size: 18px;
     color: rgb(244, 163, 61);
     display: flex;
     display: block;
@@ -63,8 +81,12 @@
     display: block;
     text-align: center;
     padding: 20px;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 3%;
+    margin-right: 20%;
+}
+
+#quienesomos1{
+    margin-top: 15px;
 }
 
 .header {
@@ -76,6 +98,11 @@
     margin-top: 40px;
     margin-bottom: 30px;
 }
+
+#imagen{
+    width: 100px;
+}
+
 
 main .titulo h1 {
     font-family: 'Akatab', sans-serif;
@@ -98,26 +125,31 @@ h1 {
 .Testimonios {
     color: #000000;
     text-align: center;
+    background-image: url('imagenes/fondotestimonios.png');
+    background-size: cover; 
+    background-position: top; 
+    background-repeat: no-repeat;
+    padding-bottom: 5%;
+    padding-top: 10%;
 }
 
 .testimonios_cards {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Akatab', sans-serif;
     width: 30%;
     display: inline-block;
     text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 20px;
+    padding-inline: 50px;
+    
 }
 
 .testimonios_cards p {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Akatab', sans-serif;
+    background-color: #000000;
     font-size: 13px;
     margin-top: 25px;
     color:rgb(255, 255, 255);
-    padding: 10px;
+    padding: 25px;
     text-align: center;
-    background-color: #000000;
     border-radius: 10px;
     border:rgb(244, 163, 61), 5px dashed;
 }
@@ -129,7 +161,7 @@ h1 {
 
 
 .mb-3 {
-    width: 40%;
+    width: 35%;
     margin:10px;
     margin-left: 10%;
 
@@ -140,10 +172,9 @@ h1 {
 }
 
 .bloque {
-    width: 40%;
+    width: 35%;
     margin:10px;
     margin-left: 10%;
-
     color: rgb(255, 255, 255);
     align-items: flex-start;
     display: flex;
@@ -154,7 +185,7 @@ h1 {
 
 
 .btn-primary {
-    width: 40%;
+    width: 35%;
     height: 40px;
     margin-top: 20px;
     margin-left: 10%;
@@ -197,14 +228,8 @@ h1 {
     width: 30%;
     display: flex;
     display: inline-block;
-     color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
-
-
-
-
-
-
 
 @media only screen and (max-width: 1100px) {
 .galeria {
@@ -224,9 +249,8 @@ font-size: 12px;
 
 }
 
-
 .descuento-contenedor {
-background-color: rgb(255, 255, 255);
+background-color: rgb(84, 0, 0);
 border-radius: 100px;
 width: 40%;
 height: 100px;
@@ -246,7 +270,7 @@ margin-top: 4%;
 input#codigo-descuento{
 padding-left: 0px;
 padding-right: 20px;
-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
 }
 
 label.codigo-descuento{
@@ -255,12 +279,12 @@ label.codigo-descuento{
     padding-top: 35px;
     padding-left: 150px;
     width: 50%;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     }
 
 button.descuento-boton{
     align-items: center;
-    margin-top: 5px;
+    margin-top: -10px;
     margin-left: 235px;
 }
 
@@ -307,9 +331,9 @@ p#mensaje-descuento {
 }
 
 
-  .contenedor-imagenes{
-    width: 45%;
-    margin-right: 45px;
+.contenedor-imagenes{
+    width: 38%;
+    margin-right: 10%;
     float: right;
     display: flex;
     flex-direction: column;
@@ -323,9 +347,22 @@ p#mensaje-descuento {
     transition: filter 0.3s;
     cursor: pointer;
     border-radius: 20px;
-  }
-  
-  .imagen-nueva:hover {
+}
+
+
+.imagen-nueva:hover {
     filter: none;
     transform: scale(1.07);
-  }
+}
+
+.header a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    transition: 0.2s;
+    padding: 38px;
+}
+.header a:hover{
+    box-shadow: 0 0px 10px 0px rgb(0, 0, 0);
+    }
+

@@ -1,0 +1,36 @@
+
+.presentacion-quienesomos p{
+    width: 35%;
+    font-family: 'Akatab', sans-serif;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    display: block;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+
+
+.imagen-quienes {
+    
+    width: 125%;
+    margin-top: 1%;
+    margin-bottom: -1%;
+
+}
+
+
+.quienes {
+    width: 80%;
+    display: flex;
+    display: inline-block;
+
+}
+
+#imagen-disfrute{
+        width:35%;
+        margin-left: 10%;
+}
+
